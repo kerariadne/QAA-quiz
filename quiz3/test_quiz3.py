@@ -15,7 +15,6 @@ def test_quiz3():
     # assert error_text == "Epic sadface: Username and password do not match any user in this service", \
     #        "Expected error message for invalid login credentials"
     
-    
     page.login("standard_user", "secret_sauce")
     assert "inventory" in driver.current_url
 
@@ -24,12 +23,10 @@ def test_quiz3():
     page.add_to_cart()
     assert page.is_remove_button_displayed(), "Expected 'Remove' button to be displayed after adding to cart"
     
-
     product_price = page.get_product_price()
     product_name = page.get_product_name()
     print(product_price, product_name)
     assert product_price == "$7.99", "Expected price to be $7.99"
-
 
     page.go_to_cart()
 

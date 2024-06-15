@@ -13,7 +13,6 @@ class LoginPage:
         self.driver.find_element(*LoginPageLocators.PASSWORD_INPUT).send_keys(password)
         self.driver.find_element(*LoginPageLocators.LOGIN_BUTTON).click()
 
-
     def get_password(self):
         print("Get Password:")
         return self.driver.find_element(*LoginPageLocators.PASSWORD_INPUT).get_attribute("value")
